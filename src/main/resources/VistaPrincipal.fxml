@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="460.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestionvehiculos.controller.ControladorPrincipal">
+    <fx:define>
+        <ToggleGroup fx:id="grupoCarga" />
+    </fx:define>
+
+    <children>
+      <Label fx:id="labelNombre" layoutX="23.0" layoutY="63.0" text="Nombre" />
+      <TextField fx:id="txtFieldNombre" layoutX="23.0" layoutY="88.0" />
+
+      <Label fx:id="labelVehiculo" layoutX="22.0" layoutY="135.0" text="Vehículo" />
+      <Label fx:id="labelFechaReserva" layoutX="24.0" layoutY="211.0" text="Fecha de reserva" />
+
+      <Button fx:id="btnReservar" layoutX="259.0" layoutY="350.0" mnemonicParsing="false" onAction="#reservar" prefHeight="25.0" prefWidth="137.0" text="Registrar reserva">
+          <tooltip>
+              <Tooltip text="Guarda la reserva. Precio: 10€/h (lenta) o 15€/h (rápida)." />
+          </tooltip>
+      </Button>
+      <Button fx:id="btnVerReservas" layoutX="259.0" layoutY="399.0" mnemonicParsing="false" onAction="#verReservas" prefHeight="25.0" prefWidth="137.0" text="Ver reservas" />
+
+      <ComboBox fx:id="comboBoxVehiculo" layoutX="23.0" layoutY="158.0" prefWidth="150.0" />
+
+      <DatePicker fx:id="datePicker" layoutX="23.0" layoutY="236.0" prefHeight="25.0" prefWidth="150.0" />
+
+      <Label layoutX="149.0" layoutY="8.0" prefHeight="38.0" prefWidth="137.0" text="Reserva de vehículo" />
+
+      <Spinner fx:id="spinnerHorasUso" layoutX="23.0" layoutY="313.0" prefHeight="25.0" prefWidth="150.0">
+          <valueFactory>
+              <SpinnerValueFactory.IntegerSpinnerValueFactory initialValue="1" max="24" min="1" />
+          </valueFactory>
+      </Spinner>
+      <Label fx:id="labelHorasUso" layoutX="24.0" layoutY="294.0" text="Horas de uso" />
+
+      <Label fx:id="labelTipoCarga" layoutX="23.0" layoutY="362.0" text="Tipo de carga" />
+      <RadioButton fx:id="cargaLenta" layoutX="31.0" layoutY="386.0" mnemonicParsing="false" text="Carga lenta" />
+      <RadioButton fx:id="cargaRapida" layoutX="31.0" layoutY="411.0" mnemonicParsing="false" text="Carga rápida" />
+
+      <TextArea fx:id="areaInfo" editable="false" layoutX="217.0" layoutY="63.0" prefHeight="262.0" prefWidth="220.0" wrapText="true" />
+   </children>
+</AnchorPane>
