@@ -59,7 +59,7 @@ cd gestion-vehiculos-javafx
 ```
 ### Compila y ejecuta
 ```bash
-mvn compile exec:java -Dexec.mainClass="Main"
+mvn javafx:run
 ```
 
 ---
